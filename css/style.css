@@ -463,4 +463,5 @@ body {
       .sidemenu__show {
         left: 0;
         top: 6rem;
-        width: 100%; } }
+        width: 100%;
+        height: 20vh; } }
