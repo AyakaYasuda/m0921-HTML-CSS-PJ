@@ -6,16 +6,25 @@
       rgba($color-secondary, 0.93)
     ),
     url(../img/hero.jpeg);
-    background-size: cover;
-    background-position: center;
-    padding: 8rem;
-    padding-top: 4rem;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem;
+  padding-top: 4rem;
 
-    display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr;
-    grid-template-columns: max-content;
-    grid-row-gap: 1.5rem;
-    justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+  }
 
   &__logo {
     height: 3rem;
@@ -38,7 +47,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       height: 1px;
       display: block;
       background-color: currentColor;
@@ -52,7 +61,8 @@
     justify-items: center;
 
     img {
-      height: 2.5rem;
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(70%);
     }
   }
