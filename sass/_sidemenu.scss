@@ -1,0 +1,24 @@
+.sidemenu {
+  display: none;
+  background-color: $color-primary;
+  position: absolute;
+  z-index: 100;
+  padding: 3rem;
+  width: 20%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+
+  
+  &__show {
+      display: block;
+      left: 8rem;
+      
+      @media only screen and (max-width: $bp-large) {
+        left: 0;
+        top: 6rem;
+        width: 100%;
+      }
+  }
+}

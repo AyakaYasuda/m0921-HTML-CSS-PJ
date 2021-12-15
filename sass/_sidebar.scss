@@ -40,16 +40,40 @@
     transform: translateY(1.5rem);
   }
 
-  @media only screen and (max-width: $bp-large) {
-    margin-top: 0;
-    margin-right: 3rem;
+  &__delete {
+    background-color: rgba(#fff, 0);
 
     &::before {
-      transform: translateY(-1.2rem);
+      transform: rotate(45deg);
     }
 
     &::after {
+      transform: translateY(-1.8px) rotate(-45deg);
+    }
+  }
+  
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+    margin-right: 3rem;
+    
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    
+    &::after {
       transform: translateY(1rem);
+    }
+
+    &__delete {
+      background-color: rgba(#fff, 0);
+    
+      &::before {
+        transform: rotate(45deg);
+      }
+    
+      &::after {
+        transform: translateY(-1.8px) rotate(-45deg);
+      }
     }
   }
 }

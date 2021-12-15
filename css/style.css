@@ -116,6 +116,12 @@ body {
     transform: translateY(-1.5rem); }
   .nav-btn::after {
     transform: translateY(1.5rem); }
+  .nav-btn__delete {
+    background-color: rgba(255, 255, 255, 0); }
+    .nav-btn__delete::before {
+      transform: rotate(45deg); }
+    .nav-btn__delete::after {
+      transform: translateY(-1.8px) rotate(-45deg); }
   @media only screen and (max-width: 62.5em) {
     .nav-btn {
       margin-top: 0;
@@ -123,7 +129,13 @@ body {
       .nav-btn::before {
         transform: translateY(-1.2rem); }
       .nav-btn::after {
-        transform: translateY(1rem); } }
+        transform: translateY(1rem); }
+      .nav-btn__delete {
+        background-color: rgba(255, 255, 255, 0); }
+        .nav-btn__delete::before {
+          transform: rotate(45deg); }
+        .nav-btn__delete::after {
+          transform: translateY(-1.8px) rotate(-45deg); } }
 
 .header {
   background-color: #54483a;
@@ -432,3 +444,23 @@ body {
   margin-left: auto;
   text-align: center;
   width: 70%; }
+
+.sidemenu {
+  display: none;
+  background-color: #c69963;
+  position: absolute;
+  z-index: 100;
+  padding: 3rem;
+  width: 20%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: all 1s; }
+  .sidemenu__show {
+    display: block;
+    left: 8rem; }
+    @media only screen and (max-width: 62.5em) {
+      .sidemenu__show {
+        left: 0;
+        top: 6rem;
+        width: 100%; } }
